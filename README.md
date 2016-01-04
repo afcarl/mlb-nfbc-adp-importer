@@ -39,6 +39,15 @@ a series of page numbers to define the collection of pages to crawl.
 If you run without the `-a page_count` option, the spider will crawl
 each position page, but miss some data. See below for more information.
 
+### Using the data
+
+After running the spider, you can import the ADP data it collects
+into PostgreSQL using `postgres-loader.sql`:
+
+```shell
+$ cat /path/to/spider/output.csv | psql <database name>
+```
+
 #### Bonus
 
 `csvkit` is a great way to peek at a CSV-formatted export from this spider.
