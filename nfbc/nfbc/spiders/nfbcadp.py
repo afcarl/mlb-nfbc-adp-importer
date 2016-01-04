@@ -61,7 +61,7 @@ class ADPSpider(scrapy.Spider):
         else:
             # generate a list of position url
             self.start_urls = [
-                ''.format(pos)
+                POS_URL.format(pos)
                 for pos in POS_LIST
             ]
             self.logger.info('Selecting all by position')
